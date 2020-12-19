@@ -25,7 +25,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
     command: filebeat setup
   - name: start filebeat service
     command: service filebeat start 
-    ```
+```
   
 This document contains the following details:
 - Description of the Topology
