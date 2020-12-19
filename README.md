@@ -6,6 +6,7 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
+  filebeat.yml
  ``` ---
 - name: installing and launching filebeat
   hosts: webservers
@@ -26,6 +27,29 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - name: start filebeat service
     command: service filebeat start 
 ```
+Metricbeat.yml
+```
+---
+- name: Install metricbeat
+  hosts: webservers
+  become: true
+  tasks:
+  - name: Download metricbeat deb
+    command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+  - name: install metricbeat deb
+    command: dpkg -i metricbeat-7.6.1-amd64.deb
+  - name: drop in metricbeat.yml
+    copy:
+      src: /etc/ansible/files/metricbeat-config.yml
+      dest: /etc/metricbeat/metricbeat.yml
+  - name: enable and configure docker module for metric beat
+    command: metricbeat modules enable system
+  - name: setup metricbeat
+    command: metricbeat setup
+  - name: start metricbeat
+    command: service metricbeat start
+```
+
   
 This document contains the following details:
 - Description of the Topology
