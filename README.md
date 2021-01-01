@@ -10,7 +10,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 [Filebeat Playbook](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/filebeat.yml)
 
 
-[Metricbeat Playbook] (https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/metricbeat.yml)
+[Metricbeat Playbook](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/metricbeat.yml)
 
 
 This document contains the following details:
@@ -25,22 +25,22 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly accessible, in addition to restricting entrance to the network.
 The Load balancers have security aspects to protect Applications from emerging threats , Authenticate User Access, Simplify PCI compliance, and protect against DDos attack. [1](https://lumecloud.com/what-does-a-load-balancer-do/)
 
-Jumpbox has the advantage of improving productivity by making it possible to work on multiple systems without the time wasting process of logging out and logging back into each priveleged area. It also improves security by separating between the user's workstation that is susceptible to being compromised and the privileged within the network. The separation helps to isolate priveleged assets from being in contact with potentially sensitive areas. It is not easy to install software in jumpbox and it can't be used for non-administrative work due to the tight access to the system.
+Jumpbox has the advantage of improving productivity by making it possible to work on multiple systems without the time-wasting process of logging out and logging back into each privileged area. It also enhances security by separating the user's workstation that is susceptible to being compromised and the privileged within the network. The separation helps to isolate privileged assets from being in contact with potentially sensitive areas. [2](https://securityboulevard.com/2020/02/privileged-access-workstation-vs-jump-server/#:~:text=Improve%20security%3A%20Jump%20servers%20create,contact%20with%20potentially%20compromised%20workstations.)
 
-RR LL
 
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics.
+
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jump Box | Gateway  | 10.0.1.6   | Linux            |
+| Web 1    | Gateway  | 10.0.1.4   | Linux              |
+| Web 2    | Gateway  | 10.0.1.5   | Linux               |
+| Web 3    | Gateway  | 10.0.0.5   | Linux 
+| 
+| ELK      | Gateway  | 10.1.0.4   | Linux 
+              
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet. 
 Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
