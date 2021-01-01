@@ -5,33 +5,14 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-[filebeat.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/filebeat.yml)
+[Installing Elk](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/install-elk.yml)
+
+[Filebeat Playbook](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/filebeat.yml)
 
 
-Metricbeat.yml
-```
----
-- name: Install metricbeat
-  hosts: webservers
-  become: true
-  tasks:
-  - name: Download metricbeat deb
-    command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
-  - name: install metricbeat deb
-    command: dpkg -i metricbeat-7.6.1-amd64.deb
-  - name: drop in metricbeat.yml
-    copy:
-      src: /etc/ansible/files/metricbeat-config.yml
-      dest: /etc/metricbeat/metricbeat.yml
-  - name: enable and configure docker module for metric beat
-    command: metricbeat modules enable system
-  - name: setup metricbeat
-    command: metricbeat setup
-  - name: start metricbeat
-    command: service metricbeat start
-```
+[Metricbeat Playbook] (https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/metricbeat.yml)
 
-  
+
 This document contains the following details:
 - Description of the Topology
 - Access Policies
@@ -42,6 +23,12 @@ This document contains the following details:
 ### Description of the Topology
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 Load balancing ensures that the application will be highly accessible, in addition to restricting entrance to the network.
+The Load balancers have security aspects to protect Applications from emerging threats , Authenticate User Access, Simplify PCI compliance, and protect against DDos attack. [1](https://lumecloud.com/what-does-a-load-balancer-do/)
+
+Jumpbox has the advantage of improving productivity by making it possible to work on multiple systems without the time wasting process of logging out and logging back into each priveleged area. It also improves security by separating between the user's workstation that is susceptible to being compromised and the privileged within the network. The separation helps to isolate priveleged assets from being in contact with potentially sensitive areas. It is not easy to install software in jumpbox and it can't be used for non-administrative work due to the tight access to the system.
+
+RR LL
+
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - _TODO: What does Filebeat watch for?_
