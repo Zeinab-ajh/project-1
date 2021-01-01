@@ -38,6 +38,8 @@ The configuration details of each machine may be found below.
 | Web 1    | Gateway  | 10.0.1.4   | Linux              |
 | Web 2    | Gateway  | 10.0.1.5   | Linux               |
 | Web 3    | Gateway  | 10.0.0.5   | Linux 
+|
+| ELK      | Gateway  | 10.1.0.4.  | Linux
 | 
 | ELK      | Gateway  | 10.1.0.4   | Linux 
               
