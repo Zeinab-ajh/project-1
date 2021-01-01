@@ -40,8 +40,7 @@ The configuration details of each machine may be found below.
 | Web 3    | Gateway  | 10.0.0.5   | Linux 
 |
 | ELK      | Gateway  | 10.1.0.4.  | Linux
-| 
-| ELK      | Gateway  | 10.1.0.4   | Linux 
+
               
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet. 
