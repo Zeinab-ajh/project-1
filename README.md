@@ -177,7 +177,7 @@ SSH into the control node and follow the steps below:
 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 ```
 
-* Copy the playbook files "[filebeat.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/filebeat.yml) and [metricbeat.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/metricbeat.yml)" to `/etc/ansible/roles`
+* Copy the playbook files [filebeat.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/filebeat.yml) and [metricbeat.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/metricbeat.yml) to `/etc/ansible/roles`
 
 * Filebeat
 1. Copy the filebeat-config.yml to `/etc/ansible/roles/files` directory after logging into the docker container from the Jumpbox provisioner.
