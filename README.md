@@ -45,6 +45,9 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 Only the jump box provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP address 50.99.147.170 which is the host IP address
 **TODO: Add whitelisted IP addresses**
+Jumpbox can access...etc
+
+
 Machines within the network can only be accessed by the Jump box provisioner.
 
 The ELK VM Machine can be accessed from the Jump Box machine that will connect to the Jumpbox docker container which can connect to the ELK VM. The public IP address for the Jump Box is: 52.188.9.8, while the private IP address is: 10.0.1.6
@@ -53,8 +56,8 @@ A summary of the access policies in place can be found in the table below.
 
 | Name        | Publicly Accessible| Allowed IP Addresses |
 |-------------|--------------------|----------------------|
-|Jump Box     |     ?              | ?                    |
-|Load Balancer|    ** Yes**        | **52.146.32.179**    |
+|Jump Box     |     yes            | my public IP,                  |
+|Load Balancer|    Yes             | **52.146.32.179**    |
 |Web 1        |     No             | 10.0.1.4             |
 |Web 2        |     No             | 10.0.1.5             |
 |Web 3        |     No             | 10.0.0.5             |
