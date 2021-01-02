@@ -139,7 +139,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 [docker ps output]:https://github.com/Zeinab-ajh/project-1/blob/main/Images/docker%20ps%20output.png
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - _TODO: List the IP addresses of the machines you are monitoring_
