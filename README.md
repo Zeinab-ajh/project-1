@@ -28,7 +28,7 @@ The Load balancers have security aspects to protect Applications from emerging t
 Jumpbox has the advantage of improving productivity by making it possible to work on multiple systems without the time-wasting process of logging out and logging back into each privileged area. It also enhances security by separating the user's workstation that is susceptible to being compromised and the privileged within the network. The separation helps to isolate privileged assets from being in contact with potentially sensitive areas. [2](https://securityboulevard.com/2020/02/privileged-access-workstation-vs-jump-server/#:~:text=Improve%20security%3A%20Jump%20servers%20create,contact%20with%20potentially%20compromised%20workstations.)
 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics.
+**Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics.**
 
 The configuration details of each machine may be found below.
 
@@ -38,28 +38,107 @@ The configuration details of each machine may be found below.
 | Web 1    | Gateway  | 10.0.1.4   | Linux              |
 | Web 2    | Gateway  | 10.0.1.5   | Linux               |
 | Web 3    | Gateway  | 10.0.0.5   | Linux 
-| ELK      | Gateway  | 10.1.0.4.  | Linux
+| ELK      | Gateway  | 10.1.0.4   | Linux
 
               
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet. 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Only the jump box provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following **IP address 50.99.147.170 which is the host IP address
+- _TODO: Add whitelisted IP addresses_**
+Machines within the network can only be accessed by the Jump box provisioner.
+
+The ELK VM Machine can be accessed from the Jump Box machine that will connect to the Jumpbox container (cool_bassi) which can connect to the ELK VM. The public IP address for the Jump Box is: 52.188.9.8 , while the private IP address is: 10.0.1.6
+
 A summary of the access policies in place can be found in the table below.
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+
+| Name        | Publicly Accessible| Allowed IP Addresses |
+|-------------|--------------------|----------------------|
+|Jump Box     |     ?              | ?                    |
+|Load Balancer|     Yes            | **52.146.32.179**    |
+| Web 1       |     No             | 10.0.1.4             |
+| Web 2       |     No             | 10.0.1.5             |
+| Web 3       |     No             | 10.0.0.5             |
+| ELK         |     **Yes**        | 10.1.0.4             |
+
+
+
 ### Elk Configuration
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it frees the focus on efforts on tasks that are more important, agentless, Idempotent, and declarative not Procedural.
+
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+1. cofinguruation of Web VM with Docker
+
+```
+---
+- name: Config Web VM with Docker
+  hosts: elkservers
+  remote_user: sysadmin
+  become: true
+  tasks:
+
+  ```
+2. Installation of docker.io, pip3, and docker
+```
+---
+- name: docker.io
+    apt:
+      force_apt_get: yes
+      update_cache: yes
+      name: docker.io
+      state: present
+
+  - name: Install pip3
+    apt:
+      force_apt_get: yes
+      update_cache: yes
+      name: python3-pip
+      state: present
+
+  - name: Install Docker python module
+    pip:
+      name: docker
+      state: present
+
+```
+
+3. Downloading and launching a docker web container
+
+```
+---
+ - name: download and launch a docker web container
+    docker_container:
+      name: elk
+      image: sebp/elk:761
+      state: started
+      restart_policy: always
+      published_ports: 
+        - 5601:5601
+        - 9200:9200
+        - 5044:5044
+```
+
+4. Enabling docker service
+```
+---
+  - name: Enable docker service
+    systemd:
+      name: docker
+      enabled: yes
+```
+
+5. Increasing virtual memory
+```
+---
+  - name: Use more memory
+    sysctl:
+      name: vm.max_map_count
+      value: "262144"
+      state: present
+      reload: yes
+```
+
+You can acess the full script from here: [install-elk.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/install-elk.yml)
+
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 ### Target Machines & Beats
