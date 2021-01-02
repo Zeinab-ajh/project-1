@@ -137,6 +137,7 @@ You can acess the full script from here: [install-elk.yml](https://github.com/Ze
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
+* docker ps output *
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/docker%20ps%20output.png)
 
 
