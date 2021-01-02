@@ -43,18 +43,18 @@ The configuration details of each machine may be found below.
               
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet. 
-Only the jump box provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following **IP address 50.99.147.170 which is the host IP address
-- _TODO: Add whitelisted IP addresses_**
+Only the jump box provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP address 50.99.147.170 which is the host IP address
+**TODO: Add whitelisted IP addresses**
 Machines within the network can only be accessed by the Jump box provisioner.
 
-The ELK VM Machine can be accessed from the Jump Box machine that will connect to the Jumpbox container (cool_bassi) which can connect to the ELK VM. The public IP address for the Jump Box is: 52.188.9.8 , while the private IP address is: 10.0.1.6
+The ELK VM Machine can be accessed from the Jump Box machine that will connect to the Jumpbox docker container which can connect to the ELK VM. The public IP address for the Jump Box is: 52.188.9.8, while the private IP address is: 10.0.1.6
 
 A summary of the access policies in place can be found in the table below.
 
 | Name        | Publicly Accessible| Allowed IP Addresses |
 |-------------|--------------------|----------------------|
 |Jump Box     |     ?              | ?                    |
-|Load Balancer|     Yes            | **52.146.32.179**    |
+|Load Balancer|    ** Yes**        | **52.146.32.179**    |
 |Web 1        |     No             | 10.0.1.4             |
 |Web 2        |     No             | 10.0.1.5             |
 |Web 3        |     No             | 10.0.0.5             |
@@ -177,7 +177,7 @@ SSH into the control node and follow the steps below:
 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 ```
 
-* Copy the playbook files "[filebeat.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/filebeat.yml) and [metricbeat.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/metricbeat.yml)" to* `/etc/ansible/roles`*
+* Copy the playbook files "[filebeat.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/filebeat.yml) and [metricbeat.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/metricbeat.yml)" to `/etc/ansible/roles`
 
 * Filebeat
 1. Copy the filebeat-config.yml to `/etc/ansible/roles/files` directory after logging into the docker container from the Jumpbox provisioner.
@@ -185,9 +185,9 @@ SSH into the control node and follow the steps below:
 Run the following:
     
 ```
-- Jumpbox login: *ssh azureuser@[Public IP]*
-- Start the docker container: *docker start [container name]*
-- Attach to the docker container: *docker attach [container name]*
+- Jumpbox login: ssh azureuser@[Public IP]
+- Start the docker container: docker start [container name]
+- Attach to the docker container: docker attach [container name]
 - cp filebeat-config.yml to /etc/ansible/roles/files
 ```
 
@@ -195,20 +195,20 @@ Run the following:
 
 2. Run: `nano filebeat-config.yml` in `/etc/ansible/roles/files` directory and update the [filebeat-config.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/filebeat-config.yml) to include the private IP address of ELK servers in line #1106 & #1806.
 
-3. Run the playbook by running *`playbook-ansible filebeat-config.yml` *in `/etc/ansible/roles/files directory`.
+3. Run the playbook by running `playbook-ansible filebeat-config.yml` in `/etc/ansible/roles/files directory`.
 
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/filebeat.yml%20output.png)
 
 
 * Metricbeat
-1. Copy the metricbeat-config.yml to /etc/ansible/roles/files directory after logging into cool_bassi docker container from the Jumpbox provisioner.
+1. Copy the metricbeat-config.yml to `/etc/ansible/roles/files` directory after logging into the docker container from the Jumpbox provisioner.
 
 Run the following:
     
 ```
-- Jumpbox login: *ssh azureuser@[Public IP]*
-- Start the docker container: *docker start [container name]*
-- Attach to the docker container: *docker attach [container name]*
+- Jumpbox login: ssh azureuser@[Public IP]
+- Start the docker container: docker start [container name]
+- Attach to the docker container: docker attach [container name]
 - cp metricbeat-config.yml to /etc/ansible/roles/files
 ```
 
@@ -217,13 +217,14 @@ Run the following:
 2. Run: `nano metricbeat-config.yml` in `/etc/ansible/roles/files` directory and update the [metricbeat-config.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/metricbeat-config.yml) to include the private IP address of ELK servers in line #62 & #96.
 
 
-3. Run the playbook by running *`playbook-ansible metricbeat-config.yml` *in `/etc/ansible/roles/files` directory.
+3. Run the playbook by running `playbook-ansible metricbeat-config.yml` in `/etc/ansible/roles/files` directory.
 
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/metricbeat.yml%20output.png)
 
 
 * Navigate to http://13.64.19.9:5601/app/kibana to check that the ELK server is running.
       **Note: Use your ELK public IP address**
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Kibanna.png)
 
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Filebeat%20module%20status.png)
 
