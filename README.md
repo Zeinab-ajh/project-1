@@ -38,7 +38,7 @@ The configuration details of each machine may be found below.
 | Web 1    | Gateway  | 10.0.1.4   | Linux              |
 | Web 2    | Gateway  | 10.0.1.5   | Linux               |
 | Web 3    | Gateway  | 10.0.0.5   | Linux 
-| ELK      | Gateway  | 10.1.0.4   | Linux
+|Project-1-ELK| Gateway  | 10.1.0.4   | Linux
 
               
 ### Access Policies
@@ -55,10 +55,10 @@ A summary of the access policies in place can be found in the table below.
 |-------------|--------------------|----------------------|
 |Jump Box     |     ?              | ?                    |
 |Load Balancer|     Yes            | **52.146.32.179**    |
-| Web 1       |     No             | 10.0.1.4             |
-| Web 2       |     No             | 10.0.1.5             |
-| Web 3       |     No             | 10.0.0.5             |
-| ELK         |     **Yes**        | 10.1.0.4             |
+|Web 1        |     No             | 10.0.1.4             |
+|Web 2        |     No             | 10.0.1.5             |
+|Web 3        |     No             | 10.0.0.5             |
+|Project-1-ELK|     **Yes**        | 10.1.0.4             |
 
 
 
@@ -137,7 +137,8 @@ You can acess the full script from here: [install-elk.yml](https://github.com/Ze
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-[docker ps output]: 
+[docker ps output]:https://github.com/Zeinab-ajh/project-1/blob/main/Images/docker%20ps%20output.png
+
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
