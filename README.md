@@ -149,6 +149,8 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 * File Beat
+
+![Alt File](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Filebeat%20module%20status.png)
 * Metric Beat
 
 These Beats allow us to collect the following information from each machine:
