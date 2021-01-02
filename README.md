@@ -229,3 +229,7 @@ Run the following:
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Filebeat%20module%20status.png)
 
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Metricbeat%20module%20status.png)
+
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Filebeat%20Dashboard.png)
+
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Metricbeat%20overview.png)
