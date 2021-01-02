@@ -79,7 +79,6 @@ The playbook implements the following tasks:
   ```
 2. Installation of docker.io, pip3, and docker
 ```
----
 - name: docker.io
     apt:
       force_apt_get: yes
@@ -104,7 +103,6 @@ The playbook implements the following tasks:
 3. Downloading and launching a docker web container
 
 ```
----
  - name: download and launch a docker web container
     docker_container:
       name: elk
@@ -119,7 +117,6 @@ The playbook implements the following tasks:
 
 4. Enabling docker service
 ```
----
   - name: Enable docker service
     systemd:
       name: docker
@@ -128,7 +125,6 @@ The playbook implements the following tasks:
 
 5. Increasing virtual memory
 ```
----
   - name: Use more memory
     sysctl:
       name: vm.max_map_count
