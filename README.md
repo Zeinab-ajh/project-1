@@ -138,14 +138,19 @@ You can acess the full script from here: [install-elk.yml](https://github.com/Ze
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 
-![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/docker%20ps%20output.png "docker ps output")
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/docker%20ps%20output.png)
 
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+1. Web 1: 10.0.1.4
+2. Web 2: 10.0.1.5
+3. Web 3: 10.0.0.5 
+
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+* File Beat
+* Metric Beat
+
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 ### Using the Playbook
