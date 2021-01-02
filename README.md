@@ -136,6 +136,8 @@ The playbook implements the following tasks:
 You can acess the full script from here: [install-elk.yml](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/install-elk.yml)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+
+[docker ps output]: 
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
