@@ -220,6 +220,10 @@ Run the following:
 
 3. Run the playbook by running `playbook-ansible metricbeat-config.yml` in `/etc/ansible/roles/files` directory.
 
+```
+kdnfjfbkbffbfbvbvbf
+```
+
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/metricbeat.yml%20output.png)
 
 
@@ -234,3 +238,5 @@ Run the following:
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Filebeat%20Dashboard.png)
 
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Metricbeat%20overview.png)
+
+
