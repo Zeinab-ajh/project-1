@@ -2,7 +2,7 @@
 ## Automated ELK Stack Deployment
 The files in this repository were used to configure the network depicted below.
 
-![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagrams/ELK%20Diagram.png) 
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/ELK%20Diagram.png) 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -139,7 +139,7 @@ You can access the full script from here: [install-elk.yml](https://github.com/Z
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 
-![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/docker%20ps%20output.png)
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/docker%20ps%20output.png)
 
 
 ### Target Machines & Beats
@@ -220,17 +220,17 @@ Run the following:
 
 3. Run the playbook by running `playbook-ansible metricbeat-config.yml` in `/etc/ansible/roles/files` directory.
 
-![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/metricbeat.yml%20output.png)
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/metricbeat.yml%20output.png)
 
 
 * Navigate to http://13.64.19.9:5601/app/kibana to check that the ELK server is running.
       **Note: Use your ELK public IP address**
-![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Kibanna.png)
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Kibanna.png)
 
-![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Filebeat%20module%20status.png)
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Filebeat%20module%20status.png)
 
-![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Metricbeat%20module%20status.png)
+![Alt text]https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Metricbeat%20module%20status.png)
 
-![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Filebeat%20Dashboard.png)
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Filebeat%20Dashboard.png)
 
-![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/Metricbeat%20overview.png)
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Metricbeat%20overview.png)
