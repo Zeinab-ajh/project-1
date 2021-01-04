@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-01-04T06:46:11.640Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="C-vwdEc5Zf_BE3WtX8LY" version="14.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-04T06:55:16.696Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="4DFKrkCDyR2iM08VOVEJ" version="14.1.4" type="github">
   <diagram name="Copy of Page-2" id="e97Mi3D0plznNzVCBhgD">
-    <mxGraphModel dx="760" dy="952" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#F8DFE2" math="0" shadow="0">
+    <mxGraphModel dx="1261" dy="819" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#F8DFE2" math="0" shadow="0">
       <root>
         <mxCell id="2Hegsr20NqXobKJcIY7s-0" />
         <mxCell id="2Hegsr20NqXobKJcIY7s-1" parent="2Hegsr20NqXobKJcIY7s-0" />
@@ -93,8 +93,8 @@
         <mxCell id="2Hegsr20NqXobKJcIY7s-23" value="&lt;h1 style=&quot;font-size: 35px&quot;&gt;Resource group - Zeinab&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;labelBackgroundColor=#F8CECC;fontFamily=Comic Sans MS;fontSize=35;fontColor=#660000;fontStyle=0;verticalAlign=middle;" parent="2Hegsr20NqXobKJcIY7s-1" vertex="1">
           <mxGeometry x="730" y="100" width="710" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="2Hegsr20NqXobKJcIY7s-24" value="&lt;h1 style=&quot;font-size: 29px&quot;&gt;Virtual Network: Zeinab-Network&amp;nbsp;&lt;/h1&gt;&lt;h1 style=&quot;font-size: 29px&quot;&gt;IP Address space: 10.0.0.0/16&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;labelBackgroundColor=#F8CECC;fontFamily=Comic Sans MS;fontSize=31;fontColor=#660000;fontStyle=0;verticalAlign=middle;" parent="2Hegsr20NqXobKJcIY7s-1" vertex="1">
-          <mxGeometry x="820" y="240" width="720" height="110" as="geometry" />
+        <mxCell id="2Hegsr20NqXobKJcIY7s-24" value="&lt;h1 style=&quot;font-size: 22px;&quot;&gt;Virtual Network: Zeinab-Network&lt;/h1&gt;&lt;h1 style=&quot;font-size: 22px;&quot;&gt;Zeinab-Subnet: 10.0.1.0/24 (248 available)&amp;nbsp;&lt;/h1&gt;&lt;h1 style=&quot;font-size: 22px;&quot;&gt;IP Address space: 10.0.0.0/16&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;labelBackgroundColor=#F8CECC;fontFamily=Comic Sans MS;fontSize=22;fontColor=#660000;fontStyle=0;verticalAlign=middle;" parent="2Hegsr20NqXobKJcIY7s-1" vertex="1">
+          <mxGeometry x="820" y="240" width="720" height="120" as="geometry" />
         </mxCell>
         <mxCell id="2Hegsr20NqXobKJcIY7s-25" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;Load Balancer&lt;/h1&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;Public IP: 52.188.9.8&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;labelBackgroundColor=#F8CECC;fontFamily=Comic Sans MS;fontSize=14;fontColor=#660000;fontStyle=0;verticalAlign=middle;align=center;" parent="2Hegsr20NqXobKJcIY7s-1" vertex="1">
           <mxGeometry x="757.95" y="450" width="155.88" height="51" as="geometry" />
@@ -246,14 +246,14 @@
         <mxCell id="-tYl4JRF3hjD-ErTfFmR-6" value="&lt;h1 style=&quot;font-size: 35px&quot;&gt;Resource group (Zeinab)&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;labelBackgroundColor=#F8CECC;fontFamily=Comic Sans MS;fontSize=35;fontColor=#660000;fontStyle=0;verticalAlign=middle;" parent="2Hegsr20NqXobKJcIY7s-1" vertex="1">
           <mxGeometry x="2460" y="200" width="710" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="vcZCROroqDKotfpQatT7-0" value="&lt;h1 style=&quot;font-size: 29px&quot;&gt;Virtual Network: Project-ELK&amp;nbsp;&lt;/h1&gt;&lt;h1 style=&quot;font-size: 29px&quot;&gt;IP Address space: 10.1.0.0/16&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;labelBackgroundColor=#F8CECC;fontFamily=Comic Sans MS;fontSize=31;fontColor=#660000;fontStyle=0;verticalAlign=middle;" vertex="1" parent="2Hegsr20NqXobKJcIY7s-1">
-          <mxGeometry x="2580" y="370" width="720" height="110" as="geometry" />
+        <mxCell id="vcZCROroqDKotfpQatT7-0" value="&lt;h1 style=&quot;font-size: 22px;&quot;&gt;Virtual Network: Project-ELK&lt;/h1&gt;&lt;h1 style=&quot;font-size: 22px;&quot;&gt;Subnets: default - 10.1.0.0/24 (250 available)&amp;nbsp;&lt;/h1&gt;&lt;h1 style=&quot;font-size: 22px;&quot;&gt;IP Address space: 10.1.0.0/16&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;labelBackgroundColor=#F8CECC;fontFamily=Comic Sans MS;fontSize=22;fontColor=#660000;fontStyle=0;verticalAlign=middle;" vertex="1" parent="2Hegsr20NqXobKJcIY7s-1">
+          <mxGeometry x="2580" y="370" width="720" height="120" as="geometry" />
         </mxCell>
         <mxCell id="vcZCROroqDKotfpQatT7-1" value="&lt;h1 style=&quot;font-size: 29px&quot;&gt;US-EAST&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;labelBackgroundColor=#F8CECC;fontFamily=Comic Sans MS;fontSize=29;fontColor=#660000;fontStyle=0;verticalAlign=middle;" vertex="1" parent="2Hegsr20NqXobKJcIY7s-1">
           <mxGeometry x="2550" y="1470" width="210" height="40" as="geometry" />
         </mxCell>
         <mxCell id="vcZCROroqDKotfpQatT7-2" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#b85450;fillColor=#f8cecc;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.2d.esx_esxi;glass=0;labelBackgroundColor=#F8CECC;fontFamily=Comic Sans MS;fontSize=12;sketch=0;" vertex="1" parent="2Hegsr20NqXobKJcIY7s-1">
-          <mxGeometry x="2860" y="608.5" width="116.6" height="185" as="geometry" />
+          <mxGeometry x="2860" y="608.5" width="260" height="401.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
