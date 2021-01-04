@@ -32,21 +32,18 @@ Jumpbox has the advantage of improving productivity by making it possible to wor
 
 The configuration details of each machine may be found below.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.1.6   | Linux            |
-| Web 1    | Gateway  | 10.0.1.4   | Linux              |
-| Web 2    | Gateway  | 10.0.1.5   | Linux               |
-| Web 3    | Gateway  | 10.0.0.5   | Linux 
-|Project-1-ELK| Gateway  | 10.1.0.4   | Linux
+| Name        | Function            | IP Address    | Operating System |
+|-------------|---------------------|---------------|------------------|
+| Jump Box    | Gateway             | 10.0.1.6      | Linux            |
+| Web 1       | Webserver           | 10.0.1.4      | Linux            |
+| Web 2       | Webserver           | 10.0.1.5      | Linux            |
+| Web 3       | Webserver           | 10.0.0.5      | Linux            |
+|Project-1-ELK| Log/Kibanna server  | 10.1.0.4      | Linux            |
 
               
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet. 
 Only the jump box provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP address 50.99.147.170 which is the host IP address
-**TODO: Add whitelisted IP addresses**
-Jumpbox can access...etc
-
 
 Machines within the network can only be accessed by the Jump box provisioner.
 
@@ -56,12 +53,12 @@ A summary of the access policies in place can be found in the table below.
 
 | Name        | Publicly Accessible| Allowed IP Addresses |
 |-------------|--------------------|----------------------|
-|Jump Box     |     yes            | my public IP,                  |
-|Load Balancer|    Yes             | **52.146.32.179**    |
+|Jump Box     |     Yes            | My Public IP         |
+|Load Balancer|     Yes            | My Public IP         |
 |Web 1        |     No             | 10.0.1.4             |
 |Web 2        |     No             | 10.0.1.5             |
 |Web 3        |     No             | 10.0.0.5             |
-|Project-1-ELK|     **Yes**        | 10.1.0.4             |
+|Project-1-ELK|     Yes            | 10.1.0.4             |
 
 
 
