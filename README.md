@@ -198,7 +198,7 @@ Run the following:
 
 3. Run the playbook by running `playbook-ansible filebeat-config.yml` in `/etc/ansible/roles/files directory`.
 
-![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Images/filebeat.yml%20output.png)
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/filebeat.yml%20output.png)
 
 
 * Metricbeat
@@ -229,7 +229,7 @@ Run the following:
 
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Filebeat%20module%20status.png)
 
-![Alt text]https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Metricbeat%20module%20status.png)
+![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Metricbeat%20module%20status.png)
 
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Filebeat%20Dashboard.png)
 
