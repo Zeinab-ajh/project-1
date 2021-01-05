@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/ELK%20Diagram.png) 
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YML file may be used to install only certain pieces of it, such as Filebeat.
 
 [Installing Elk](https://github.com/Zeinab-ajh/project-1/blob/main/Ansible/install-elk.yml)
 
@@ -29,7 +29,7 @@ The Load balancers have security aspects to protect Applications from emerging t
 Jumpbox has the advantage of improving productivity by making it possible to work on multiple systems without the time-wasting process of logging out and logging back into each privileged area. It also enhances security by separating the user's workstation that is susceptible to being compromised and the privileged within the network. The separation helps to isolate privileged assets from being in contact with potentially sensitive areas. [2](https://securityboulevard.com/2020/02/privileged-access-workstation-vs-jump-server/#:~:text=Improve%20security%3A%20Jump%20servers%20create,contact%20with%20potentially%20compromised%20workstations.)
 
 
-**Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics.**
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics.
 
 The configuration details of each machine may be found below.
 
@@ -220,9 +220,6 @@ Run the following:
 
 3. Run the playbook by running `playbook-ansible metricbeat-config.yml` in `/etc/ansible/roles/files` directory.
 
-```
-kdnfjfbkbffbfbvbvbf
-```
 
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/metricbeat.yml%20output.png)
 
@@ -238,5 +235,6 @@ kdnfjfbkbffbfbvbvbf
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Filebeat%20Dashboard.png)
 
 ![Alt text](https://github.com/Zeinab-ajh/project-1/blob/main/Diagram%20and%20Images/Metricbeat%20overview.png)
+
 
 
